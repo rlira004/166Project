@@ -50,7 +50,7 @@ appnt_ID CHAR(20),
 date CHAR(20),
 time_slot CHAR(20),
 type ENUM("past", "active", "available", "waitlisted") NOT NULL,
-PRIMARY KEY (appnt_ID),
+PRIMARY KEY (appnt_ID)
 );
 
 CREATE TABLE Past(
@@ -94,7 +94,7 @@ patient_ID CHAR(20),
 name CHAR(20),
 gender CHAR(20),
 age CHAR(3),
-address CHAR(20)
+address CHAR(20),
 num_appointments INTEGER,
 PRIMARY KEY (patient_ID)
 );
