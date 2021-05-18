@@ -95,7 +95,7 @@ name CHAR(20),
 gender CHAR(20),
 age CHAR(3),
 address CHAR(20)
-#appointments INTEGER,
+num_appointments INTEGER,
 PRIMARY KEY (patient_ID)
 );
 
