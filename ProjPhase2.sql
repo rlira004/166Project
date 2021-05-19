@@ -49,44 +49,31 @@ CREATE TABLE Appointment(
 appnt_ID CHAR(20),
 date CHAR(20),
 time_slot CHAR(20),
-type ENUM("past", "active", "available", "waitlisted") NOT NULL,
 PRIMARY KEY (appnt_ID)
 );
 
 CREATE TABLE Past(
 appnt_ID CHAR(20),
-date CHAR(20),
-time_slot CHAR(20),
-type ENUM("past") NOT NULL,
 PRIMARY KEY (appnt_ID),
-FOREIGN KEY (appnt_ID, date, time_slot, type) REFERENCES Appointment (appnt_ID, date, time_slot, type)
+FOREIGN KEY (appnt_ID) REFERENCES Appointment (appnt_ID)
 );
 
 CREATE TABLE Active(
 appnt_ID CHAR(20),
-date CHAR(20),
-time_slot CHAR(20),
-type ENUM("active") NOT NULL,
 PRIMARY KEY (appnt_ID),
-FOREIGN KEY (appnt_ID, date, time_slot, type) REFERENCES Appointment (appnt_ID, date, time_slot, type)
+FOREIGN KEY (appnt_ID) REFERENCES Appointment (appnt_ID)
 );
 
 CREATE TABLE Available(
 appnt_ID CHAR(20),
-date CHAR(20),
-time_slot CHAR(20),
-type ENUM("available") NOT NULL,
 PRIMARY KEY (appnt_ID),
-FOREIGN KEY (appnt_ID, date, time_slot, type) REFERENCES Appointment (appnt_ID, date, time_slot, type)
+FOREIGN KEY (appnt_ID) REFERENCES Appointment (appnt_ID)
 );
 
 CREATE TABLE Waitlisted(
 appnt_ID CHAR(20),
-date CHAR(20),
-time_slot CHAR(20),
-type ENUM("waitlisted") NOT NULL,
 PRIMARY KEY (appnt_ID),
-FOREIGN KEY (appnt_ID, date, time_slot, type) REFERENCES Appointment (appnt_ID, date, time_slot, type)
+FOREIGN KEY (appnt_ID) REFERENCES Appointment (appnt_ID)
 );
 
 CREATE TABLE Patient(
